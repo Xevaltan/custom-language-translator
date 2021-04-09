@@ -1,0 +1,17 @@
+body {
+  background-image: url(./lion.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #212529;
+}
+
+.vx1 {
+  transform: translateY(248px);
+}
+.vx2 {
+  transform: translateY(250px);
+}
+
+.go-translate {
+  transform: translate(-90px, 300px);
+}

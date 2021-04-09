@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>English to Draktorian Translator</title>
+    <meta charset="utf8" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h3>English to Draktorian translator</h1>
+      <h3>
+        Draktorian language is a natural language created by Xevaltan
+      </h3>
+<!--       
+      <button type="button" class="btn btn-primary reverse">Reversed? : false</button> -->
+      <input
+        type="text"
+        class="form-control vx1"
+        placeholder="Text to translate"
+        aria-label="Text to translate"
+        aria-describedby="basic-addon2"
+      />
+      <input
+        type="text"
+        class="form-control vx2"
+        placeholder="Text translated"
+        aria-label="Text translated"
+        aria-describedby="basic-addon2"
+      />
+    </div>
+
+    <script src="./index.js"></script>
+    <script src="./Draktorian.plugin.js"></script>
+
+    <script>
+      function $_GET(param) {
+  var vars = {};
+  window.location.href.replace(location.hash, "").replace(
+    /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+    function (m, key, value) {
+      // callback
+      vars[key] = value !== undefined ? value : "";
+    }
+  );
+
+  if (param) {
+    return vars[param] ? vars[param] : null;
+  }
+  return vars;
+}
+
+  let t = $_GET("t");
+  if(t) {
+    document.body.innerHTML = translate(t);
+  }
+    </script>
+  </body>
+</html>
